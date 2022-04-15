@@ -1,0 +1,9 @@
+.home {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.home--title {
+  font-size: 3rem;
+}

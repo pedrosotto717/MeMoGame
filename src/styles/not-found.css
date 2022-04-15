@@ -1,0 +1,9 @@
+.not-found {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.not-found--title {
+  font-size: 3rem;
+}
