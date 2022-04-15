@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { NewGame } from './pages/NewGame'
+import { NotFound } from './pages/NotFound'
+import { Home } from './pages/Home'
+import { Game } from './pages/Game'
+import GameContext from './context/GameContext'
 
-function App() {
+//styles
+import './styles/buttons.css'
+
+/**
+ * toggleTheme
+ * Lazyload and Suspense
+ */
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <GameContext.Provider value={{ type: 'icons', size: 12 }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/new-game" element={<NewGame />} />
+          <Route path="/game" element={<Game type="icons" size={14} />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </GameContext.Provider>
+  )
 }
 
-export default App;
+export default App
