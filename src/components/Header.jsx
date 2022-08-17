@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <div className="header-container">
       <header>
-        <h1>Logo</h1>
+        <h1>MeMo Game</h1>
         <nav className="nav">
           <button type="button">Menu</button>
           <button type="button">Theme</button>

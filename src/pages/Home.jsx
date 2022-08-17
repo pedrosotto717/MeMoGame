@@ -10,7 +10,7 @@ export const Home = () => {
     <div className="home-container">
       <section className="container home">
         <h1 className="home--title">MeMo Game</h1>
-        <Link to="/game" className="btn--main">
+        <Link to="/new-game" className="btn--main">
           Start <GiPlayButton className="icon" />
         </Link>
       </section>
